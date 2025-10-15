@@ -39,7 +39,7 @@ pipeline {
     stage('Deploy Container') {
       steps {
         sh 'docker rm -f my-web-app-container || true'
-        sh 'docker run -d -p 8080:80 --name my-web-app-container $DOCKER_IMAGE'
+        sh 'docker run -d -p 8081:80 --name my-web-app-container $DOCKER_IMAGE'
       }
     }
   }

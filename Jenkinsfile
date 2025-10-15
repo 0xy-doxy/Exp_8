@@ -6,6 +6,12 @@ pipeline {
   }
 
   stages {
+    stage('Clean Workspace') {
+      steps {
+        deleteDir() // Start fresh
+      }
+    }
+
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/0xy-doxy/EXP_8.git'

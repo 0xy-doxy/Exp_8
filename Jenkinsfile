@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/0xy-doxy/EXP_8.git'
+        git branch: 'main', url: 'https://github.com/0xy-doxy/EXP_8.git'
       }
     }
 
